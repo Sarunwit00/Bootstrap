@@ -37,13 +37,32 @@ session_start();
       </ul>
     </div>
 </nav>
-    หมวดหมู่: 
-    <select name="category">
+<div class="mt-3">
+    <label>หมวดหมู่:</label>
+    <span class="dropdown">
+        <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            --ทั้งหมด--
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">ทั้งหมด</a></li>
+            <li><a class="dropdown-item" href="#">เรื่องทั่วไป</a></li>
+            <li><a class="dropdown-item" href="#">เรื่องเรียน</a></li>
+        </ul>
+    </span>
+    <?php
+        if(isset($_SESSION['id'])){
+            echo"<a href='newpost.php' class='btn btn-success btn-sm' style='float:right;'>";
+            echo"<i class='bi bi-plus'></i> สร้างกระทู้ใหม่</a>";
+        }
+    ?>
+</div>
+    <!-- <select name="category">
         <option value="all">--ทั้งหมด--</option>
         <option value="general">เรื่องทั่วไป</option>
         <option value="study">เรื่องเรียน</option>
-    </select>
-    <?php
+    </select> -->
+    
+    <!-- <?php
     if (!isset($_SESSION['id'])){
     
     echo "<a href='login.php' style='float: right;'>เข้าสู่ระบบ</a>";
@@ -56,22 +75,20 @@ session_start();
     echo "<div><a href='newpost.php'>สร้างกระทู้ใหม่</a></div>";
     
     }
-    ?>
-
-    <ul>
+    ?> -->
+    
+    <table class="table table-striped mt-4">
         <?php
         for($i=1;$i<=10;$i=$i+1)
-        {
-            echo "<li><a href=post.php?id=$i>กระทู้ที่ $i</a>";
-            if(isset($_SESSION['id']) && $_SESSION['role']=='a'){
-                echo "&nbsp;&nbsp;<a href='delete.php?id=$i'>ลบ</a>";
+            {
+                echo "<tr><td><a href=post.php?id=$i>กระทู้ที่ $i</a>";
+                if(isset($_SESSION['id']) && $_SESSION['role']=='a'){
+                    echo "&nbsp;&nbsp;<a href='delete.php?id=$i' class='btn btn-danger btn-sm me-2' style='float:right'><i class='bi bi-trash'></i></a>";
+                }
+                echo "</td></tr>";
             }
-            echo "</li>";
-        }
         ?>
-        
-        
-    </ul>
+    </table>
     </div>
 </body>
 </html>
