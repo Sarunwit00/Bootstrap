@@ -18,9 +18,18 @@ session_start();
   <div class="container-fluid">
     <a class="navbar-brand" href="index.php"><i class="bi bi-house-door-fill"></i>Home</a>
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <?php
+            if (!isset($_SESSION['id'])){
+                echo "<li class='nav-item'>";
+                    echo "<a class='nav-link' href='login.php'><i class='bi bi-pencil'></i>เข้าสู่ระบบ</a>";
+                echo "</li>";
+            }else{
+
+            }
+        ?>
+        <!-- <li class="nav-item">
           <a class="nav-link" href="login.php"><i class="bi bi-pencil"></i>เข้าสู่ระบบ</a>
-        </li>
+        </li> -->
         <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
