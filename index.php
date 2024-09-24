@@ -24,22 +24,18 @@ session_start();
                     echo "<a class='nav-link' href='login.php'><i class='bi bi-pencil'></i>เข้าสู่ระบบ</a>";
                 echo "</li>";
             }else{
-
+                echo "<li class='nav-item dropdown'>";
+                  echo "<a class='btn btn-outline-secondary btm-sm dropdown-toggle' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>";
+                  echo "<i class='bi bi-person-lines-fill'></i> $_SESSION[username] </a>";
+                  echo "<ul class='dropdown-menu'>";
+                    echo "<li><a class='dropdown-item' href='logout.php'><i class='bi bi-power'></i> ออกจากระบบ</a></li>";
+                  echo "</ul>";
+                echo "</li>";
+                
             }
         ?>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="login.php"><i class="bi bi-pencil"></i>เข้าสู่ระบบ</a>
-        </li> -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-person-lines-fill"></i> admin
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="logout.php"><i class="bi bi-power"></i> ออกจากระบบ</a></li>
-          </ul>
       </ul>
-   
-  </div>
+    </div>
 </nav>
     หมวดหมู่: 
     <select name="category">
