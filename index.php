@@ -16,15 +16,8 @@ session_start();
     <h1 style="text-align: center;" class="mt-3">Webboard KakKak</h1>
     <nav class="navbar navbar-expand-lg" style="background-color: #d3d3d3;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Home</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php"><i class="bi bi-house-door-fill"></i>Home</a>
-        </li>
+    <a class="navbar-brand" href="index.php"><i class="bi bi-house-door-fill"></i>Home</a>
+      <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="login.php"><i class="bi bi-pencil"></i>เข้าสู่ระบบ</a>
         </li>
@@ -39,7 +32,7 @@ session_start();
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul> -->
       </ul>
-    </div>
+   
   </div>
 </nav>
     หมวดหมู่: 
