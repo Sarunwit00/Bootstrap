@@ -81,7 +81,7 @@ session_start();
         <?php
         for($i=1;$i<=10;$i=$i+1)
             {
-                echo "<tr><td><a href=post.php?id=$i>กระทู้ที่ $i</a>";
+                echo "<tr><td><a style='text-decoration:none' href=post.php?id=$i>กระทู้ที่ $i</a>";
                 if(isset($_SESSION['id']) && $_SESSION['role']=='a'){
                     echo "&nbsp;&nbsp;<a href='delete.php?id=$i' class='btn btn-danger btn-sm me-2' style='float:right'><i class='bi bi-trash'></i></a>";
                 }
