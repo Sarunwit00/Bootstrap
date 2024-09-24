@@ -26,7 +26,7 @@ session_start();
           <a class="nav-link active" aria-current="page" href="index.php"><i class="bi bi-house-door-fill"></i>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="login.php">เข้าสู่ระบบ</a>
+          <a class="nav-link" href="login.php"><i class="bi bi-pencil"></i>เข้าสู่ระบบ</a>
         </li>
         <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
