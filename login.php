@@ -20,8 +20,14 @@ if(isset($_SESSION['id'])){
     <div class="container-lg">
         <h1 style="text-align: center;" class="mt-3">Webboard KakKak</h1>
         <?php include "nav.php" ?>
-        <div class="row">
+        <div class="row mt-4">
             <div class="col-sm-8 col-md-6 col-lg-4 mx-auto">
+                <?php
+                    if(isset($_SESSION['error'])){
+                        echo "<div class = 'alert alert-danger mt-3'>ชื่อบัญชีหรือหรัสผ่านไม่ถูกต้อง</div>";
+                        unset($_SESSION['error']);
+                    }
+                ?>
                 <div class="card mt-3" >
                     <h5 class="card-header">เข้าสู่ระบบ</h5>
                     <div class="card-body">
@@ -31,8 +37,8 @@ if(isset($_SESSION['id'])){
                                 <input id="login" type="text" class="form-control" name="login">
                            </div>
                            <div class="form-group mt-3">
-                                <label for="Pwd" class="form-label">Paassword:</label>
-                                <input id="Pwd" type="text" class="form-control" mame="pwd">
+                                <label for="Pwd" class="form-label">Password:</label>
+                                <input id="Pwd" type="password" class="form-control" name="pwd">
                            </div>
                            
                            <div class="mt-3 d-flex justify-content-center">
