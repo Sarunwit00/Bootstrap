@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +17,18 @@
         <?php include "nav.php" ?>
         <div class="row mt-4">
             <div class="col-sm-8 col-md-6 col-lg-4 mx-auto">
+                <?php
+                    session_start();
+                    if(isset($_SESSION['add_login'])){
+                        if($_SESSION['add_login'] == 'error'){
+                           echo "<div class = 'alert alert-danger'>ชื่อบัญชีซ้ำหรือฐานข้อมูลมีปัญหา</div>";
+                        }
+                        else{
+                            echo "<div class = 'alert alert-success'>เพิ่มบัญชีเรียบร้อยแล้ว</div>";
+                        }
+                        unset($_SESSION['add_login']);
+                    }
+                ?>
                 <div class="card border-primary">
                     <h5 class="card-header bg-primary text-white">เข้าสู่ระบบ</h5>
                     <div class="card-body">
