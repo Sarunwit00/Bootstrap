@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 11, 2024 at 12:03 PM
+-- Generation Time: Oct 15, 2024 at 05:56 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -71,6 +71,13 @@ CREATE TABLE `post` (
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `post`
+--
+
+INSERT INTO `post` (`id`, `title`, `content`, `post_date`, `cat_id`, `user_id`) VALUES
+(9, 'math', 'mmmmmmm', '2024-10-15 08:50:15', 2, 8);
+
 -- --------------------------------------------------------
 
 --
@@ -93,7 +100,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `login`, `password`, `name`, `gender`, `email`, `role`) VALUES
 (8, 'p', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'dsdf', 'f', 'a@email.com', 'a'),
-(11, 't', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Sarunwit pi', 'm', 'minn7714@gmail.com', 'm');
+(11, 't', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Sarunwit pi', 'm', 'minn7714@gmail.com', 'm'),
+(17, '123', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'hkukuk', 'm', 'minn7714@gmail.com', 'm');
 
 --
 -- Indexes for dumped tables
@@ -137,19 +145,19 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
